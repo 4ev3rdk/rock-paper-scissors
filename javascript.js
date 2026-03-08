@@ -133,11 +133,11 @@ function playRound(computerChoice, humanChoice) {
         result.textContent = `Congratulations ! You Won the game  `;
         result.textContent += "You owe Dev a Coffee ☕"
         result.style.color = "green";
-        // result.style.fontSize = "16px";
         result.style.border = "2px solid #b0ab8f";
         result.style.background = "#b0ab8f";
         result.style.borderRadius = "6px";
         result.style.padding = "4px";
+
 
     }
     else if (computerScore === 5) {
@@ -147,11 +147,12 @@ function playRound(computerChoice, humanChoice) {
 
 
         result.style.color = "red";
-        // result.style.fontSize = "16px";
+
         result.style.border = "2px solid #b0ab8f";
         result.style.background = "#b0ab8f";
         result.style.borderRadius = "6px";
         result.style.padding = "4px";
+
 
 
 

@@ -56,7 +56,10 @@ body {
 
 #result {
     font-size: 16px;
+    /* min-height: 40px; */
+    margin-top: 20px;
     margin-bottom: 20px;
+
 
 }
 
@@ -67,6 +70,10 @@ body {
     gap: 40px;
     /* background-color: yellow; */
     height: auto;
+    /* margin-bottom: 30px; */
+
+
+
 
 }
 
@@ -89,7 +96,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
+    /* margin-top: auto; */
     font-family: 'Courier New', Courier, monospace;
 }
 
