@@ -6,25 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./styles.css">
-    <script defer src="./javascript.js"> </script>
+
+    <script defer src="./javascript.js">
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Special+Elite&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1> Rock Paper Scissors</h1>
-    <h2> Choose Your Move</h2>
+    <div class="main">
+        <h1 class="heading"> ROCK PAPER SCISSORS</h1>
 
 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+        <div id="round-win"></div>
+        <div id="round"></div>
 
-    <div id="round"></div>
-    <div id="score"></div>
-    <div id="result">
+        <div id="player-sign"></div>
+        <div id="score"></div>
 
+        <h2 class="chooseMove"> Choose Your Move</h2>
+
+
+        <div class="btns">
+            <button id="rock">
+                <div class="sign">✊</div>
+            </button>
+            <button id="paper">
+                <div class="sign">✋</div>
+
+            </button>
+            <button id="scissors">
+                <div class="sign">✌️</div>
+
+            </button>
+        </div>
+
+        <div id="result">
+
+        </div>
     </div>
-
-
+    <footer class="footer">
+        Copyright © 4ev3rdk
+        <a href=https://github.com/4ev3rdk>
+            <img class="githubLogo" src="./githubb.svg  "></a>
+    </footer>
 </body>
 
 </html>

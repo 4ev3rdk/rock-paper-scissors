@@ -51,13 +51,43 @@ scissors.addEventListener("click", () => {
 
 
 
-
+const sign = document.querySelector("#player-sign");
 const round = document.querySelector("#round");
+const roundWin = document.querySelector("#round-win");
 const score = document.querySelector("#score");
 const result = document.querySelector("#result");
 
+function playerSign(humanChoice, computerChoice) {
+    if (humanChoice === "Rock" && computerChoice === "Rock") {
+        sign.textContent = `✊    ✊`;
+    }
+    else if (humanChoice === "Paper" && computerChoice === "Paper") {
+        sign.textContent = `✋    ✋`;
+    }
+    else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
+        sign.textContent = `✌️    ✌️`;
+    }
 
+    if (humanChoice === "Rock" && computerChoice === "Paper") {
+        sign.textContent = `✊      ✋`;
+    }
+    else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        sign.textContent = `✊      ✌️`;
 
+    }
+    else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        sign.textContent = `✋      ✊ `;
+    }
+    else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+        sign.textContent = `✋      ✌️ `;
+    }
+    else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+        sign.textContent = `✌️      ✊ `;
+    }
+    else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        sign.textContent = `✌️      ✋ `;
+    }
+}
 function playRound(computerChoice, humanChoice) {
     if (humanScore >= 5 || computerScore >= 5) {
 
@@ -67,40 +97,69 @@ function playRound(computerChoice, humanChoice) {
     if (computerChoice === humanChoice) {
 
 
+        roundWin.textContent = `Round tied !`;
+        playerSign(humanChoice, computerChoice);
         round.textContent = `${computerChoice} and ${humanChoice} cuts each other`;
-        score.textContent = `You:${humanScore} Computer:${computerScore}`;
+        score.textContent = `You:${humanScore}     Dev:${computerScore}`;
 
 
     }
     else if (computerChoice === "Rock" && humanChoice == "Scissors" || computerChoice === "Paper" && humanChoice === "Rock" || computerChoice === "Scissors" && humanChoice === "Paper") {
         computerScore++;
 
+        roundWin.textContent = `You lost !`;
+        playerSign(humanChoice, computerChoice);
+
+
         round.textContent = `${computerChoice} beats ${humanChoice}`;
-        score.textContent = `You:${humanScore} Computer:${computerScore}`;
+        score.textContent = `You:${humanScore}     Dev:${computerScore}`;
 
 
     }
     else {
         humanScore++;
 
+        roundWin.textContent = `You Won!`;
+        playerSign(humanChoice, computerChoice);
+
+
         round.textContent = `${humanChoice} beats ${computerChoice}`;
-        score.textContent = `You:${humanScore} Computer:${computerScore}`;
+        score.textContent = `You:${humanScore}      Dev:${computerScore}`;
 
     }
 
     if (humanScore === 5) {
 
-        result.textContent = ` You Won the game  You:${humanScore}  Computer:${computerScore} `;
-
+        result.textContent = `Congratulations ! You Won the game  `;
+        result.textContent += "You owe Dev a Coffee ☕"
+        result.style.color = "green";
+        // result.style.fontSize = "16px";
+        result.style.border = "2px solid #b0ab8f";
+        result.style.background = "#b0ab8f";
+        result.style.borderRadius = "6px";
+        result.style.padding = "4px";
 
     }
     else if (computerScore === 5) {
 
-        result.textContent = `Computer Won the game You:${humanScore} Computer:${computerScore} `;
+        result.textContent = `Oops ! You lost the game  `;
+        result.textContent += "You owe Dev a Coffee ☕ "
+
+
+        result.style.color = "red";
+        // result.style.fontSize = "16px";
+        result.style.border = "2px solid #b0ab8f";
+        result.style.background = "#b0ab8f";
+        result.style.borderRadius = "6px";
+        result.style.padding = "4px";
+
+
+
 
     }
-
 }
+
+
 
 
 

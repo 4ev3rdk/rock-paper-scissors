@@ -1,8 +1,104 @@
 body {
-    background-color: rgb(10, 20, 30);
+    background-color: #111a2b;
     color: white;
-    /* display: flex; */
-    justify-content: center;
-    /* align-items: center; */
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+    /* font-family: "Press Start 2P", system-ui; */
+}
+
+.heading {
+    width: 100%;
+    padding: 38px;
+    font-size: 28px;
+    background-color: #10151f;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    font-family: "Press Start 2P", system-ui;
+    color: #ffc23e;
+}
+
+.chooseMove {
+    font-size: 28px;
+    margin: 10px;
+}
+
+#round-win {
+    font-size: 24px;
+    margin-top: 10px;
+
+}
+
+#player-sign {
+    font-size: 80px;
+}
+
+#round {
+    font-size: 18px;
+
+}
+
+#score {
+    font-size: 24px;
+
+}
+
+#result {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* background-color: yellow; */
+    height: auto;
+
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#rock,
+#paper,
+#scissors {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #b0ab8f;
+    border-radius: 10px;
+    background-color: #b0ab8f;
+    font-size: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.githubLogo {
+    filter: invert(1);
+    height: auto;
+    width: 25px;
+}
+
+.githubLogo:hover {
+    transform: scale(1.1);
 }
